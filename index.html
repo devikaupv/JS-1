@@ -1,0 +1,41 @@
+<!DOCTYPE HTML>
+<html>
+  
+<head>
+    <title>
+        Get current formatted date 
+    </title>
+</head>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Click me to see Time.</button>
+<p id="demo"></p>
+
+<body style="text-align:center;"
+    id="body">
+    <button onclick="Result()">
+        Click me to get date
+    </button>
+    <p id="final"></p>
+    <script>
+
+        var el_down = document.getElementById("final");
+        var today = new Date();
+    
+        var dd = today.getDate();
+        var mm = today.getMonth() + 1;
+        var yyyy = today.getFullYear();
+        if (dd < 10) {
+            dd = '0' + dd;
+        }
+        if (mm < 10) {
+            mm = '0' + mm;
+        }
+        var today = dd + '/' + mm + '/' + yyyy;
+        function Result() {
+            el_down.innerHTML = today;
+        }
+    </script>
+</body>
+  
+</html>
